@@ -25,3 +25,8 @@ jobs:
         run: |
           chmod +x gradlew 
           ./gradlew build sonar -Dsonar.token=${{ secrets.TOKEN_SONARCLOUD_MICROSERVICIO }}
+
+      - name: Docker Build
+        run: |
+          docker build --tag pastrian/microservicio-java:latest
+          docker image
