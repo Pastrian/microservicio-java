@@ -34,7 +34,7 @@ jobs:
           
       - name: Docker Build
         run: |
-          docker build --tag pastrian/microservicio-java:latest
+          docker build --tag pastrian/microservicio-java:latest .
           docker image
 
       - name: Docker push
